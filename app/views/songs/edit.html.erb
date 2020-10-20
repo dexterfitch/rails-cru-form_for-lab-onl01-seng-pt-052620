@@ -1,5 +1,10 @@
 <%= form_for @song, url: { action: "update" } do |f| %>
-  <%= f.text_field :name %>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %><br>
+  <%= f.label :artist_id %><br>
+  <%= f.text_field :artist_id %><br>
+  <%= f.label :genre_id %><br>
+  <%= f.text_field :genre_id %><br>
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-  <%= f.submit "Update Song", html: { class: "btn-submit" } %>
+  <%= f.submit "Create Song", html: { class: "btn-submit" } %>
 <% end %>
