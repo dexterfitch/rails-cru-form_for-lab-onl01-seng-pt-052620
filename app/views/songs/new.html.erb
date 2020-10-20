@@ -2,7 +2,8 @@
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.label :artist %>
-  <%= collection_select(:artist_id, @artists, :id, :name, :include_blank => "Select artist") %>
+  <%= collection_select(:artist_id, @artists, :id, :name, :include_blank => "Select artist") %><br>
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
   <%= f.submit "Create Song", html: { class: "btn-submit" } %>
 <% end %>
+<br>
