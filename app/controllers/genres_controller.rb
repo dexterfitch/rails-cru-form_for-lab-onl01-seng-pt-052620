@@ -1,9 +1,5 @@
 class GenresController < ApplicationController
 
-    def index
-      @genres = Genre.all
-    end
-
     def create
       @genre = Genre.create(strong_params(:genre, :name))
       redirect_to genre_path(@genre)
