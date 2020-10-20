@@ -1,9 +1,5 @@
 class ArtistsController < ApplicationController
 
-  def index
-    @artists = Artist.all
-  end
-
   def create
     @artist = Artist.create(strong_params(:artist, :name, :bio))
     redirect_to artist_path(@artist)
